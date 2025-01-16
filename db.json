@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": "8647",
+      "name": "Coazon",
+      "image": "https://img.freepik.com/foto-gratis/fondo-multiusos-rosa-roja-aniversario-boda-cumpleanos-u-otras-celebraciones_1340-7116.jpg",
+      "price": "65"
+    },
+    {
+      "id": "3a4b",
+      "name": "Rosa",
+      "image": "https://img.freepik.com/foto-gratis/primer-plano-flores-rosas-rosadas-etiqueta-madera-corazon-espacio-texto_181624-33063.jpg",
+      "price": "10"
+    },
+    {
+      "id": "9398",
+      "name": "Luca",
+      "image": "https://img.freepik.com/foto-gratis/fondo-multiusos-rosa-roja-aniversario-boda-cumpleanos-u-otras-celebraciones_1340-7116.jpg",
+      "price": "84"
+    },
+    {
+      "id": "5d66",
+      "name": "Fresa",
+      "image": "https://img.freepik.com/foto-gratis/fondo-multiusos-rosa-roja-aniversario-boda-cumpleanos-u-otras-celebraciones_1340-7116.jpg",
+      "price": "98"
+    },
+    {
+      "id": "8fa2",
+      "name": "Rosa",
+      "image": "https://img.freepik.com/foto-gratis/fondo-multiusos-rosa-roja-aniversario-boda-cumpleanos-u-otras-celebraciones_1340-7116.jpg",
+      "price": "96"
+    },
+    {
+      "id": "d850",
+      "name": "Coazon",
+      "image": "https://img.freepik.com/foto-gratis/fondo-multiusos-rosa-roja-aniversario-boda-cumpleanos-u-otras-celebraciones_1340-7116.jpg",
+      "price": "35"
+    },
+    {
+      "id": "a83c",
+      "name": "Fresa",
+      "image": "https://img.freepik.com/foto-gratis/primer-plano-flores-rosas-rosadas-etiqueta-madera-corazon-espacio-texto_181624-33063.jpg",
+      "price": "78"
+    }
+  ]
+}

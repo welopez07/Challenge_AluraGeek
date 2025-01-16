@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Challenge AluraGeek</title>
+</head>
+<body>    
+    <header>        
+        <div class="header">
+            <div class="header__container">
+                <div class="header__logo">
+                    <img src="./imagenes/corazones.png" alt="corazones de alura geek">                    
+                </div>
+                <div class="header__title">
+                    <h1>Alura<span>Geek</span></h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Sección izquierda: Mis Productos -->
+        <section class="products-section">
+            <h1>Mis Productos:</h1>            
+            <div class="products-container">
+                <!-- Mensaje si no hay productos -->
+                <p class="no-products-message">No se han agregado productos.</p>                              
+            </div>
+        </section>
+
+        <!-- Sección derecha: Agregar Producto -->
+        <section class="form-section">
+            <h1>Agregar Producto:</h1>
+            <form class="add-product-form">
+                <label for="product-name">Nombre del Producto:</label>
+                <input type="text" id="product-name" placeholder="Ingrese el nombre" required />
+
+                <label for="product-price">Precio del Producto:</label>
+                <input type="number" id="product-price" placeholder="Ingrese el precio" required />
+
+                <!-- Campo combinado para ingresar URL o subir imagen -->
+                <label for="image-input">Imagen del Producto:</label>
+                <div class="input-wrapper">
+                <!-- Campo para ingresar URL o mostrar el nombre del archivo -->
+                <input type="text" id="image-input" placeholder="Ingrese una URL o seleccione un archivo..." 
+                />
+                <!-- Botón de carpeta para seleccionar archivo -->
+                <i class="fa-solid fa-folder file-icon" id="file-picker-icon" aria-hidden="true"></i>
+                <!-- Campo oculto para el archivo -->
+                <input 
+                    type="file" 
+                    id="file-picker" 
+                    accept="image/*" 
+                    style="display: none;" 
+                />
+                </div>                
+                <div class="form-buttons">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpiar</button>
+                </div>
+            </form>
+        </section>                
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer__container">
+                <div class="footer__logo">
+                    <img src="./imagenes/corazones.png" alt="corazones de alura geek">
+                    <h1>Alura<span>Geek</span></h1>
+                </div>
+                <p class="footer__developer">DESARROLLADO POR WILSON LÓPEZ</p>
+                <p class="footer__credits">ALURA LATAM - 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+    
+</body>
+</html>

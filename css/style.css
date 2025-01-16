@@ -1,0 +1,396 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima de la ventana */
+    box-sizing: border-box; /* Incluye padding y borde en el cálculo del tamaño */
+}
+
+/* Estilos del encabezado */
+.header {
+    width: 100%; /* Tamaño del header que ocupe el 100% de la pantalla  */
+    height: 96px;
+    background-color: #5D04D9; /* Color de fondo */
+    display: flex;
+    justify-content: center; /* Centrar el contenido horizontalmente */
+    align-items: center; /* Centrar el contenido verticalmente */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    /* box-sizing: border-box; Incluye padding en el cálculo del ancho y alto */
+}
+
+/* estilos del contenedor*/
+.header__container {
+    display: flex;
+    align-items: center; /* Alinear verticalmente */
+}
+
+/* estilos del logo */
+.header__logo img {
+    height: 64px; /* Ajusta el tamaño de la imagen */
+    margin-right: 16px; /* Espacio entre la imagen y el título */
+}
+
+/* estilos del titulo */
+.header__title h1 {    
+    font-size: 24px;
+    color: white;
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+/* Title highlight styles */
+.header__title span {
+    font-weight: regular;
+}
+
+/* Estilos generales del contenido principal */
+main {
+    display: flex;
+    flex: 1; /* Ocupa todo el espacio restante */
+    flex-wrap: wrap; /* Ajusta el contenido en dispositivos pequeños */
+    justify-content: space-between; /* Espaciado entre secciones */    
+    padding: 20px;
+    gap: 20px; /* Espacio entre las secciones */    
+}
+
+/* Sección izquierda: Productos */
+.products-section {
+    flex: 1; /* Ocupa el 50% del espacio */
+    min-width: 300px;    
+    border-radius: 8px;
+    padding: 20px;
+    overflow-y: auto; /* Agrega scroll si excede la altura */
+}
+   
+
+.products-section h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Especificamente 3 columnas */
+    gap: 20px; /* Espacio entre tarjetas */
+    padding: 20px; 
+    justify-items: center; /* Centra las tarjetas horizontalmente */
+}
+
+
+/*Estilos específicos para las tarjetas y sus elementos */
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 196px;
+    height: 258px; /* Altura fija para todas las cards*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* padding general a la card */  
+    margin: 0 auto;
+}
+
+
+.image-container {
+    width: 95%;
+    height: 180px;
+    border: 2px solid #ddd; /*marco para la imagen */
+    border-radius: 8px;
+    padding: 8px;    
+    margin-bottom: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.card-info {
+    padding: 0 10px; /*padding horizontal para separar del borde */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* esoacio entre el nombre y el precio */
+}
+
+
+.product-name {
+    font-size: 14px;
+    margin: 0;
+    font-weight: bold;
+    gap: 25px;
+    padding: 10px;  
+}
+
+.price-delete-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #5D04D9;
+    margin: 0;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.delete-btn:hover {
+    color: #cc0000;
+}
+
+
+.no-products-message {
+    color: #999;
+    font-style: italic;
+    text-align: center;
+    margin-top: 16px;
+}
+
+/* Seccion derecha: Formulario */
+.form-section {
+    flex: 1; /* Ocupa el 50% del espacio */
+    max-width: 400px;    
+    border-radius: 8px;
+    padding: 16px;
+    order: 1; /* Cambia el orden de las secciones, En pantallas pequeñas, esta sección aparece arriba de las tarjetas */
+}
+
+.form-section h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.add-product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.add-product-form label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Estilo para el selector de imagen o URL */
+.add-product-form .image-options {
+    display: flex;
+    gap: 8px; /* Espacio entre las opciones */
+    align-items: center;
+}
+
+.add-product-form input[type="text"],
+.add-product-form input[type="number"],
+.add-product-form input[type="url"],
+.add-product-form input[type="file"]{
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo para el campo combinado */
+.add-product-form .image-input-container {
+    position: relative;
+}
+
+.add-product-form .image-input-container input[type="text"] {
+    padding-right: 40px; /* Espacio para el botón de selección */
+}
+
+.add-product-form .image-input-container input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    width: 40px;
+    cursor: pointer;
+}
+
+.add-product-form .image-input-container::after {
+    content: 'Seleccionar';
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    font-size: 12px;
+    background-color: #5D04D9;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+/*Estilos para el botón de selección de imagen */
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 400px;
+  }
+  
+  #image-input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .file-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  #file-picker {
+    display: none;
+  }
+
+/* Estilo para los botones */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.form-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5D04D9;
+    color: white;
+    cursor: pointer;
+}
+
+.form-buttons button:hover {
+    background-color: #4502b5;
+}
+
+
+/* Estilos generales del footer */
+.footer {
+    background-color: #5D04D9; /* Mismo color del header */
+    padding: 20px 0; /* Espaciado interno */
+    text-align: center; /* Centrar contenido */
+    color: white;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+    gap: 10px; /* Espaciado entre elementos */
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaciado entre la imagen y el texto */
+}
+
+.footer__logo img {
+    width: 48px; /* Tamaño de la imagen */
+    height: auto;
+}
+
+.footer__logo h1 {
+    font-family: 'Press Start 2P', sans-serif; /* Fuente del título */
+    font-size: 24px; /* Tamaño del texto */
+    color: white; /* Color del texto */
+    margin: 0;
+}
+
+.footer__developer, .footer__credits {
+    font-family: 'IBM Plex Mono', sans-serif; /* Fuente para los textos secundarios */
+    font-size: 16px; /* Tamaño del texto */
+    margin: 0;
+}
+
+.footer__developer {
+    font-weight: 400; /* Regular */
+}
+
+.footer__credits {
+    font-weight: 200; /* Extra Light */
+}
+
+
+
+/* Media query para responsividad */
+@media (max-width: 1024px) {
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        height: auto; /* Ajusta la altura automáticamente */
+        padding: 16px; /* Añade espacio alrededor del contenido */
+    }
+
+    .header__container {
+        flex-direction: row; /* Cambia a diseño vertical */
+        text-align: center; /* Centra el texto */
+    }
+
+    .header__logo img {
+        margin-right: 0; /* Elimina margen lateral */
+        margin-bottom: 8px; /* Espacio entre la imagen y el título */
+    }
+
+    .header__title h1 {
+        font-size: 24px; /* Reduce el tamaño de la fuente para móviles */
+    }
+
+    main {
+        flex-direction: column; /* Cambia a diseño vertical */        
+    }
+    
+    .form-section {
+        order: -1; /* Esto hace que el formulario aparezca primero */
+        width: 100%;
+        max-width: none;
+    }
+
+    .products-section {
+        width: 100%;
+    }
+
+    /* Mantener dos columnas en móvil */
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; 
+        padding: 15px;
+    }
+
+    /* Ajustar tamaño de card en móvil si es necesario */
+    .card {
+        width: 100%; /* El ancho se ajustará al contenedor */
+        max-width: 250px; /* Limitar el ancho máximo */
+        margin: 0 auto;
+    }
+
+}
