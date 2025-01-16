@@ -55,19 +55,6 @@ git clone https://github.com/welopez07/Challenge_AluraGeek
   * Localiza el producto que deseas eliminar.
   * Haz clic en el icono de la papelera que se encuentra en la tarjeta del producto.
 
-### Estructura del Proyecto
-
-proyecto/
-├── index.html
-├── css/
-│   └── styles.css
-├── js/
-│   ├── api.js     (funciones de API)
-│   ├── dom.js     (manipulación del DOM)
-│   └── main.js    (lógica principal)
-├── assets/
-│   └── images/
-└── README.md
 
 ### Mejoras Futuras
 
